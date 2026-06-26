@@ -118,6 +118,22 @@ git push origin v1.0.0
 
 A imagem `v1.0.0`, `1.0.0` e `1.0` é gerada automaticamente.
 
+### Docker Compose
+
+Dois arquivos, cada um para um caso:
+
+```bash
+# Produção: baixa a imagem do GHCR (sem buildar nada)
+docker compose up -d          # http://localhost:8080
+docker compose logs -f        # logs
+docker compose down           # para e remove
+
+# Desenvolvimento: builda local a partir do Dockerfile
+docker compose -f docker-compose.local.yml up -d --build
+```
+
+Ambos expõem na porta `8080`, com `restart: unless-stopped` e healthcheck de 30s.
+
 ## 🎨 Identidade Visual
 
 - **Cor primária:** `#5B5BF6` (indigo)

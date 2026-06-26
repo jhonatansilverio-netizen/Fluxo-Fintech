@@ -1,0 +1,22 @@
+# docker-compose.yml — Fluxo Fintech
+# Uso:
+#   docker compose up -d          # sobe em background
+#   docker compose logs -f        # acompanha logs
+#   docker compose down           # para e remove
+#
+# A imagem é baixada do GHCR (mesma do CI). Para buildar local em vez de
+# puxar, use: docker compose -f docker-compose.local.yml up -d
+
+services:
+  web:
+    image: ghcr.io/jhonatansilverio-netizen/fluxo-fintech:main
+    container_name: fluxo-fintech
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
