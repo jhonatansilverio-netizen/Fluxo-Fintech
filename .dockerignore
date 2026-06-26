@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+.github
+
+# Dependências e build
+node_modules
+dist
+.vite
+
+# Docker (não recursivo)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Editor / OS
+.DS_Store
+.vscode
+.idea
+*.log
+*.swp
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Claude
+.claude

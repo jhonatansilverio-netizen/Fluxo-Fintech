@@ -66,6 +66,30 @@ npm run preview  # Preview do build
 - ✅ Validação de formulário
 - ✅ SEO básico (meta description, lang, theme-color)
 
+## 🐳 Docker
+
+Build e execução containerizados com **multi-stage** (Node 20 → Nginx Alpine).
+
+```bash
+# Build da imagem
+docker build -t fluxo-fintech .
+
+# Rodar localmente em http://localhost:8080
+docker run --rm -p 8080:80 fluxo-fintech
+
+# Ver logs
+docker logs -f <container-id>
+```
+
+A imagem final (~25 MB) contém apenas os estáticos do `dist/` servidos pelo Nginx.
+O Nginx já está configurado para:
+
+- Cache imutável de 1 ano em `/assets/` (arquivos com hash do Vite)
+- Compressão gzip
+- SPA fallback (todas as rotas desconhecidas caem no `index.html`)
+
+O `Dockerfile` define `GITHUB_PAGES=true` durante o build, então o `base` path `/Fluxo-Fintech/` é aplicado nos assets — funciona tanto no GitHub Pages quanto em qualquer host servindo em `/`.
+
 ## 🎨 Identidade Visual
 
 - **Cor primária:** `#5B5BF6` (indigo)
