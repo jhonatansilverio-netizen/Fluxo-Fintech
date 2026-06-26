@@ -1,0 +1,290 @@
+/* ============================================
+   FLUXO — Hero Section
+   ============================================ */
+.hero {
+  padding-top: calc(var(--header-h) + var(--space-9));
+  padding-bottom: var(--space-9);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hero__content { max-width: 560px; }
+
+.hero__title {
+  margin-bottom: var(--space-4);
+}
+
+.hero__slogan {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--c-text);
+  margin-bottom: var(--space-3);
+}
+
+.hero__description {
+  font-size: 1.0625rem;
+  margin-bottom: var(--space-6);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+
+.hero__trust {
+  display: flex;
+  gap: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--c-border);
+}
+
+.trust-item strong {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--c-text);
+  line-height: 1.1;
+}
+
+.trust-item span {
+  font-size: 0.875rem;
+  color: var(--c-text-muted);
+}
+
+/* Visual — Mockup do app */
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 540px;
+}
+
+.hero__blob {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(91, 91, 246, 0.18), transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -20px); }
+}
+
+/* Phone mockup */
+.phone {
+  width: 300px;
+  height: 600px;
+  background: linear-gradient(145deg, #1a1d2e, #0f1220);
+  border-radius: 44px;
+  padding: 12px;
+  box-shadow: var(--shadow-xl), inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
+  position: relative;
+  transform: rotate(-3deg);
+  transition: transform var(--t-slow);
+}
+
+.phone:hover { transform: rotate(0deg) scale(1.02); }
+
+.phone__notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 26px;
+  background: #000;
+  border-radius: var(--r-full);
+  z-index: 2;
+}
+
+.phone__screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #5B5BF6 0%, #7878F8 30%, #FAFAFB 30%, #FAFAFB 100%);
+  border-radius: 32px;
+  padding: 52px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .phone__screen {
+  background: linear-gradient(180deg, #5B5BF6 0%, #7878F8 30%, #141826 30%, #141826 100%);
+}
+
+.phone__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.phone__header i { width: 16px; height: 16px; }
+
+.phone__balance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.phone__label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.phone__balance strong {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.phone__actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background: #fff;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .phone__actions { background: var(--c-bg-elev); }
+
+.phone__actions span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--c-text);
+}
+
+.phone__actions i {
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border-radius: var(--r-full);
+  stroke-width: 2.5;
+}
+
+.phone__card {
+  background: #fff;
+  padding: 14px;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+[data-theme="dark"] .phone__card { background: var(--c-bg-elev); }
+
+.phone__card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.phone__card-row span { color: var(--c-text-muted); }
+.phone__card-row strong { color: var(--c-text); font-family: var(--ff-display); }
+
+.phone__progress {
+  height: 6px;
+  background: var(--c-border);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.phone__progress-bar {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent-cool));
+  border-radius: var(--r-full);
+}
+
+.phone__card-limit {
+  font-size: 0.7rem;
+  color: var(--c-text-muted);
+}
+
+.phone__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.75rem;
+}
+
+[data-theme="dark"] .phone__item { background: var(--c-bg-elev); }
+
+.phone__item i {
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  border-radius: var(--r-sm);
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+}
+
+.phone__item div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.phone__item strong { color: var(--c-text); font-weight: 600; }
+.phone__item span:last-child {
+  color: var(--c-accent-cool);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    text-align: center;
+  }
+
+  .hero__content { max-width: 100%; }
+  .hero__actions { justify-content: center; }
+  .hero__trust { justify-content: center; gap: var(--space-5); }
+  .hero__visual { min-height: 480px; }
+}
+
+@media (max-width: 600px) {
+  .hero__title { font-size: 2.25rem; }
+  .hero__trust { flex-wrap: wrap; gap: var(--space-4); }
+  .trust-item { flex: 1 1 30%; }
+  .phone { width: 260px; height: 520px; }
+}

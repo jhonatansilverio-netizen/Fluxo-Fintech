@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fluxo — A fintech que simplifica seu dinheiro. Conta digital, PIX, cartão sem taxas e investimentos em um só lugar." />
+  <meta name="theme-color" content="#5B5BF6" />
+  <title>Fluxo — Seu dinheiro em movimento constante</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+
+  <!-- Lucide via CDN (funciona sem build) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="brand" aria-label="Fluxo — Página inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M6 22C10 22 10 10 16 10C22 10 22 22 26 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">Fluxo</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link">Início</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#beneficios" class="nav__link">Benefícios</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+          <i data-lucide="moon"></i>
+        </button>
+        <a href="#contato" class="btn btn--primary btn--sm">Abrir conta</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge">
+            <span class="badge__dot"></span>
+            Novo • Pix Automático disponível
+          </span>
+          <h1 class="hero__title">
+            Seu dinheiro em <span class="gradient-text">movimento constante</span>.
+          </h1>
+          <p class="hero__slogan">Conta digital completa, sem tarifas e sem complicação.</p>
+          <p class="hero__description">
+            Pix ilimitado, cartão virtual, investimentos e cashback — tudo em um único aplicativo feito para simplificar sua vida financeira.
+          </p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--primary btn--lg">
+              Começar agora
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#servicos" class="btn btn--ghost btn--lg">
+              <i data-lucide="play-circle"></i>
+              Conhecer serviços
+            </a>
+          </div>
+          <div class="hero__trust">
+            <div class="trust-item">
+              <strong>+1M</strong>
+              <span>usuários ativos</span>
+            </div>
+            <div class="trust-item">
+              <strong>4.9★</strong>
+              <span>nas lojas</span>
+            </div>
+            <div class="trust-item">
+              <strong>0</strong>
+              <span>tarifas escondidas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__header">
+                <span>Olá, Willian</span>
+                <i data-lucide="bell"></i>
+              </div>
+              <div class="phone__balance">
+                <span class="phone__label">Saldo disponível</span>
+                <strong>R$ 4.837,90</strong>
+              </div>
+              <div class="phone__actions">
+                <span><i data-lucide="arrow-up-right"></i> Enviar</span>
+                <span><i data-lucide="arrow-down-left"></i> Receber</span>
+                <span><i data-lucide="qr-code"></i> Pix</span>
+              </div>
+              <div class="phone__card">
+                <div class="phone__card-row">
+                  <span>Cartão virtual</span>
+                  <strong>•••• 4821</strong>
+                </div>
+                <div class="phone__progress">
+                  <div class="phone__progress-bar"></div>
+                </div>
+                <span class="phone__card-limit">R$ 1.247 / R$ 5.000</span>
+              </div>
+              <div class="phone__item">
+                <i data-lucide="shopping-bag"></i>
+                <div>
+                  <strong>Cashback recebido</strong>
+                  <span>+R$ 24,90</span>
+                </div>
+              </div>
+              <div class="phone__item">
+                <i data-lucide="trending-up"></i>
+                <div>
+                  <strong>Rendimento CDB</strong>
+                  <span>+0,82% no mês</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__blob"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Sobre nós</span>
+          <h2 class="section-title">Tecnologia que <span class="gradient-text">simplifica</span> suas finanças</h2>
+          <p class="section-lead">
+            Nascemos com uma missão simples: devolver às pessoas o controle do próprio dinheiro, sem letras miúdas, sem taxas abusivas e sem atendimento demorado.
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <article class="about__card">
+            <div class="about__icon"><i data-lucide="rocket"></i></div>
+            <h3>História</h3>
+            <p>Fundada em 2024 por um grupo de fintechs e designers, a Fluxo surgiu da frustração com bancos tradicionais lentos e burocráticos. Em menos de um ano, ultrapassamos 1 milhão de contas abertas.</p>
+          </article>
+          <article class="about__card">
+            <div class="about__icon"><i data-lucide="target"></i></div>
+            <h3>Missão</h3>
+            <p>Democratizar o acesso a serviços financeiros de qualidade, oferecendo produtos transparentes que cabem no bolso e na rotina de qualquer pessoa.</p>
+          </article>
+          <article class="about__card">
+            <div class="about__icon"><i data-lucide="eye"></i></div>
+            <h3>Visão</h3>
+            <p>Ser a primeira escolha em finanças pessoais na América Latina, reconhecida pela clareza, pela inovação e pelo cuidado genuíno com o cliente.</p>
+          </article>
+          <article class="about__card">
+            <div class="about__icon"><i data-lucide="heart"></i></div>
+            <h3>Valores</h3>
+            <p>Transparência radical, segurança em primeiro lugar, simplicidade como regra e pessoas sempre acima de produtos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Serviços</span>
+          <h2 class="section-title">Tudo o que você precisa, <span class="gradient-text">em um só lugar</span></h2>
+          <p class="section-lead">Uma conta completa para receber, gastar, guardar e crescer seu dinheiro.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="zap"></i></div>
+            <h3>PIX ilimitado</h3>
+            <p>Transfira 24 horas por dia, 7 dias por semana, sem custo e sem limites burocráticos.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="wallet"></i></div>
+            <h3>Conta digital</h3>
+            <p>Conta completa com cartão, transferências, boletos e extrato detalhado. Sem taxa de manutenção.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="credit-card"></i></div>
+            <h3>Cartão virtual</h3>
+            <p>Gere cartões descartáveis para compras online com segurança extra e bloqueio em um toque.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="trending-up"></i></div>
+            <h3>Investimentos</h3>
+            <p>CDB, LCI, LCA, fundos e tesouro direto a partir de R$ 1, com liquidez diária quando você precisar.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="gift"></i></div>
+            <h3>Cashback</h3>
+            <p>Receba parte de volta em compras parceiras. O dinheiro cai direto na sua conta, sem pontos confusos.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon"><i data-lucide="hand-coins"></i></div>
+            <h3>Empréstimos</h3>
+            <p>Crédito pessoal com taxa justa, aprovação rápida e parcelas que cabem no seu planejamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="beneficios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Benefícios</span>
+          <h2 class="section-title">Por que escolher a <span class="gradient-text">Fluxo</span>?</h2>
+          <p class="section-lead">Construímos cada detalhe pensando na sua tranquilidade financeira.</p>
+        </div>
+
+        <div class="benefits__grid">
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="shield-check"></i></div>
+            <h3>Segurança avançada</h3>
+            <p>Biometria, criptografia e autenticação em dois fatores. Seu dinheiro protegido a cada transação.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="ban"></i></div>
+            <h3>Sem tarifas</h3>
+            <p>Conta, cartão, transferências e Pix gratuitos. O que você vê é o que você paga.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="smartphone"></i></div>
+            <h3>Facilidade de uso</h3>
+            <p>Interface intuitiva pensada para qualquer pessoa, mesmo quem nunca usou banco digital.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="message-circle"></i></div>
+            <h3>Atendimento humano</h3>
+            <p>Suporte 24/7 via chat com pessoas reais — sem bots repetitivos nem menus infinitos.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="cpu"></i></div>
+            <h3>Tecnologia moderna</h3>
+            <p>Infraestrutura escalável e estável. Tudo abre rápido, mesmo em horários de pico.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon"><i data-lucide="globe"></i></div>
+            <h3>100% digital</h3>
+            <p>Abra sua conta em 3 minutos pelo celular, sem agência, sem papelada e sem fila.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contato">
+      <div class="container cta__inner">
+        <div class="cta__content">
+          <h2>Pronto para colocar seu dinheiro em movimento?</h2>
+          <p>Abra sua conta gratuita em menos de 3 minutos. Sem tarifas, sem burocracia.</p>
+        </div>
+        <form class="cta__form" id="contactForm" novalidate>
+          <label class="sr-only" for="email">Seu e-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          <button type="submit" class="btn btn--primary">
+            Quero minha conta
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </form>
+        <p class="cta__note" id="formNote" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M6 22C10 22 10 10 16 10C22 10 22 22 26 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__name">Fluxo</span>
+        </a>
+        <p>Seu dinheiro em movimento constante. Fintech feita para simplificar.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Rodapé — Empresa">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Rodapé — Contato">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:contato@fluxo.com.br">contato@fluxo.com.br</a></li>
+          <li><a href="tel:+5511999999999">+55 (11) 99999-9999</a></li>
+          <li>São Paulo — SP</li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Redes sociais</h4>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Fluxo Fintech. Todos os direitos reservados.</p>
+      <p>Projeto acadêmico — Demonstração.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

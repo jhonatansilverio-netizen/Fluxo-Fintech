@@ -1,0 +1,57 @@
+/* ============================================
+   FLUXO — Services Section
+   ============================================ */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.service-card {
+  padding: var(--space-6);
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-base);
+  cursor: default;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--c-primary);
+}
+
+.service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-md);
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary-dark));
+  color: #fff;
+  margin-bottom: var(--space-4);
+  transition: transform var(--t-base);
+}
+
+.service-card:hover .service-card__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.service-card__icon i {
+  width: 26px;
+  height: 26px;
+  stroke-width: 2;
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-2);
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
