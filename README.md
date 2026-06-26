@@ -90,6 +90,34 @@ O Nginx já está configurado para:
 
 O `Dockerfile` define `GITHUB_PAGES=true` durante o build, então o `base` path `/Fluxo-Fintech/` é aplicado nos assets — funciona tanto no GitHub Pages quanto em qualquer host servindo em `/`.
 
+### Imagem pública no GHCR
+
+A cada push na `main` e em tags `v*`, uma imagem multi-arch (`linux/amd64` + `linux/arm64`) é publicada automaticamente em:
+
+```
+ghcr.io/jhonatansilverio-netizen/fluxo-fintech
+```
+
+```bash
+# Última build da main
+docker pull ghcr.io/jhonatansilverio-netizen/fluxo-fintech:main
+docker run --rm -p 8080:80 ghcr.io/jhonatansilverio-netizen/fluxo-fintech:main
+
+# Versão específica
+docker pull ghcr.io/jhonatansilverio-netizen/fluxo-fintech:v1.0.0
+```
+
+Tags disponíveis: `main`, `1`, `1.0`, `1.0.0`, `<sha-curto>` (ex: `5536f60`).
+
+### Publicar uma versão
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+A imagem `v1.0.0`, `1.0.0` e `1.0` é gerada automaticamente.
+
 ## 🎨 Identidade Visual
 
 - **Cor primária:** `#5B5BF6` (indigo)
