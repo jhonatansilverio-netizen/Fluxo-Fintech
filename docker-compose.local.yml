@@ -1,8 +1,9 @@
-# docker-compose.local.yml — Build local (sem precisar do GHCR)
+# docker-compose.local.yml — Alias do compose principal para builds locais.
 # Uso:
 #   docker compose -f docker-compose.local.yml up -d --build
 #
-# Útil para desenvolvimento e para validar o Dockerfile antes de subir.
+# É equivalente ao `docker-compose.yml` padrão. Foi mantido apenas por
+# compatibilidade com quem já usa esse nome nos comandos.
 
 services:
   web:

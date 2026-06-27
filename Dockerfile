@@ -9,14 +9,15 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
 
-# Copia o código-fonte e gera o build de produção
+# Copia o código-fonte e gera o build de produção.
+# DOCKER=true faz o Vite usar base "/" (Nginx serve na raiz).
 COPY . .
-RUN GITHUB_PAGES=true npm run build
+RUN DOCKER=true npm run build
 
 # ---------- Runtime stage ----------
 FROM nginx:1.27-alpine AS runtime
 
-# Config Nginx ajustada para SPA/hashes em /Fluxo-Fintech/
+# Config Nginx ajustada para SPA/hashes servidos em "/"
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copia apenas os artefatos finais — imagem final fica leve (~25MB)
